@@ -1,0 +1,33 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# TensorFlow / Keras
+.keras/
+*.h5
+
+# Raw dataset
+data/raw/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Python environment files
+.env
+# Processed datasets
+data/processed/*.npz
