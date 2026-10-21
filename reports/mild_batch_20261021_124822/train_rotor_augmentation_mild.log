@@ -1,0 +1,213 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792579712.440699    2924 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792579713.761759    2924 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792579724.671458    2924 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Loading recordings...
+Preparing augmented training examples...
+Preparing clean validation examples...
+Training shape: (3493, 40, 87, 1)
+Validation shape: (648, 40, 87, 1)
+Model: "sequential"
++--------------------------------------------------------------------------+
+| Layer (type)                    | Output Shape           |       Param # |
+|---------------------------------+------------------------+---------------|
+| conv2d (Conv2D)                 | (None, 40, 87, 16)     |           160 |
+|---------------------------------+------------------------+---------------|
+| max_pooling2d (MaxPooling2D)    | (None, 20, 43, 16)     |             0 |
+|---------------------------------+------------------------+---------------|
+| conv2d_1 (Conv2D)               | (None, 20, 43, 32)     |         4,640 |
+|---------------------------------+------------------------+---------------|
+| max_pooling2d_1 (MaxPooling2D)  | (None, 10, 21, 32)     |             0 |
+|---------------------------------+------------------------+---------------|
+| conv2d_2 (Conv2D)               | (None, 10, 21, 64)     |        18,496 |
+|---------------------------------+------------------------+---------------|
+| global_average_pooling2d        | (None, 64)             |             0 |
+| (GlobalAveragePooling2D)        |                        |               |
+|---------------------------------+------------------------+---------------|
+| dense (Dense)                   | (None, 32)             |         2,080 |
+|---------------------------------+------------------------+---------------|
+| dense_1 (Dense)                 | (None, 3)              |            99 |
++--------------------------------------------------------------------------+
+ Total params: 25,475 (99.51 KB)
+ Trainable params: 25,475 (99.51 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/20
+
+[1m  1/110[0m [37m====================[0m [1m1:14[0m 687ms/step - accuracy: 0.3438 - loss: 3.1357
+[1m  9/110[0m [32m=[0m[37m===================[0m [1m0s[0m 7ms/step - accuracy: 0.3611 - loss: 1.9642
+[1m 18/110[0m [32m===[0m[37m=================[0m [1m0s[0m 6ms/step - accuracy: 0.3594 - loss: 1.5811
+[1m 27/110[0m [32m====[0m[37m================[0m [1m0s[0m 6ms/step - accuracy: 0.3819 - loss: 1.4252
+[1m 37/110[0m [32m======[0m[37m==============[0m [1m0s[0m 6ms/step - accuracy: 0.3725 - loss: 1.3323
+[1m 46/110[0m [32m========[0m[37m============[0m [1m0s[0m 6ms/step - accuracy: 0.3947 - loss: 1.2832
+[1m 56/110[0m [32m==========[0m[37m==========[0m [1m0s[0m 6ms/step - accuracy: 0.4263 - loss: 1.2338
+[1m 66/110[0m [32m============[0m[37m========[0m [1m0s[0m 6ms/step - accuracy: 0.4375 - loss: 1.1976
+[1m 77/110[0m [32m==============[0m[37m======[0m [1m0s[0m 6ms/step - accuracy: 0.4509 - loss: 1.1685
+[1m 88/110[0m [32m================[0m[37m====[0m [1m0s[0m 5ms/step - accuracy: 0.4528 - loss: 1.1531
+[1m 99/110[0m [32m==================[0m[37m==[0m [1m0s[0m 5ms/step - accuracy: 0.4590 - loss: 1.1363
+[1m110/110[0m [32m====================[0m[37m[0m [1m0s[0m 5ms/step - accuracy: 0.4698 - loss: 1.1178
+Epoch 1: val_loss improved from None to 0.82869, saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+Epoch 1: finished saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 7ms/step - accuracy: 0.4698 - loss: 1.1178 - val_accuracy: 0.5633 - val_loss: 0.8287
+Epoch 2/20
+
+[1m  1/110[0m [37m====================[0m [1m2s[0m 26ms/step - accuracy: 0.5625 - loss: 0.8852
+[1m 12/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.6016 - loss: 0.8883
+[1m 23/110[0m [32m====[0m[37m================[0m [1m0s[0m 5ms/step - accuracy: 0.6264 - loss: 0.8556
+[1m 33/110[0m [32m======[0m[37m==============[0m [1m0s[0m 5ms/step - accuracy: 0.6250 - loss: 0.8506
+[1m 43/110[0m [32m=======[0m[37m=============[0m [1m0s[0m 5ms/step - accuracy: 0.6359 - loss: 0.8405
+[1m 53/110[0m [32m=========[0m[37m===========[0m [1m0s[0m 5ms/step - accuracy: 0.6344 - loss: 0.8363
+[1m 63/110[0m [32m===========[0m[37m=========[0m [1m0s[0m 5ms/step - accuracy: 0.6453 - loss: 0.8323
+[1m 74/110[0m [32m=============[0m[37m=======[0m [1m0s[0m 5ms/step - accuracy: 0.6546 - loss: 0.8158
+[1m 85/110[0m [32m===============[0m[37m=====[0m [1m0s[0m 5ms/step - accuracy: 0.6625 - loss: 0.8030
+[1m 96/110[0m [32m=================[0m[37m===[0m [1m0s[0m 5ms/step - accuracy: 0.6670 - loss: 0.7992
+[1m108/110[0m [32m===================[0m[37m=[0m [1m0s[0m 5ms/step - accuracy: 0.6730 - loss: 0.7888
+Epoch 2: val_loss improved from 0.82869 to 0.73658, saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+Epoch 2: finished saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.6733 - loss: 0.7875 - val_accuracy: 0.6806 - val_loss: 0.7366
+Epoch 3/20
+
+[1m  1/110[0m [37m====================[0m [1m2s[0m 25ms/step - accuracy: 0.7188 - loss: 0.6524
+[1m 11/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.6676 - loss: 0.7453
+[1m 22/110[0m [32m====[0m[37m================[0m [1m0s[0m 5ms/step - accuracy: 0.6946 - loss: 0.7406
+[1m 33/110[0m [32m======[0m[37m==============[0m [1m0s[0m 5ms/step - accuracy: 0.6941 - loss: 0.7294
+[1m 44/110[0m [32m========[0m[37m============[0m [1m0s[0m 5ms/step - accuracy: 0.7081 - loss: 0.7041
+[1m 55/110[0m [32m==========[0m[37m==========[0m [1m0s[0m 5ms/step - accuracy: 0.7097 - loss: 0.7045
+[1m 66/110[0m [32m============[0m[37m========[0m [1m0s[0m 5ms/step - accuracy: 0.7202 - loss: 0.6972
+[1m 77/110[0m [32m==============[0m[37m======[0m [1m0s[0m 5ms/step - accuracy: 0.7297 - loss: 0.6827
+[1m 88/110[0m [32m================[0m[37m====[0m [1m0s[0m 5ms/step - accuracy: 0.7337 - loss: 0.6707
+[1m 99/110[0m [32m==================[0m[37m==[0m [1m0s[0m 5ms/step - accuracy: 0.7333 - loss: 0.6727
+Epoch 3: val_loss improved from 0.73658 to 0.65099, saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+Epoch 3: finished saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.7383 - loss: 0.6623 - val_accuracy: 0.7685 - val_loss: 0.6510
+Epoch 4/20
+
+[1m  1/110[0m [37m====================[0m [1m2s[0m 27ms/step - accuracy: 0.7188 - loss: 0.5741
+[1m 12/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.7396 - loss: 0.5918
+[1m 23/110[0m [32m====[0m[37m================[0m [1m0s[0m 5ms/step - accuracy: 0.7418 - loss: 0.6045
+[1m 34/110[0m [32m======[0m[37m==============[0m [1m0s[0m 5ms/step - accuracy: 0.7491 - loss: 0.5968
+[1m 45/110[0m [32m========[0m[37m============[0m [1m0s[0m 5ms/step - accuracy: 0.7618 - loss: 0.5893
+[1m 56/110[0m [32m==========[0m[37m==========[0m [1m0s[0m 5ms/step - accuracy: 0.7684 - loss: 0.5885
+[1m 67/110[0m [32m============[0m[37m========[0m [1m0s[0m 5ms/step - accuracy: 0.7766 - loss: 0.5813
+[1m 78/110[0m [32m==============[0m[37m======[0m [1m0s[0m 5ms/step - accuracy: 0.7800 - loss: 0.5738
+[1m 89/110[0m [32m================[0m[37m====[0m [1m0s[0m 5ms/step - accuracy: 0.7830 - loss: 0.5672
+[1m100/110[0m [32m==================[0m[37m==[0m [1m0s[0m 5ms/step - accuracy: 0.7816 - loss: 0.5708
+Epoch 4: val_loss improved from 0.65099 to 0.59246, saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+Epoch 4: finished saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.7847 - loss: 0.5632 - val_accuracy: 0.7978 - val_loss: 0.5925
+Epoch 5/20
+
+[1m  1/110[0m [37m====================[0m [1m3s[0m 29ms/step - accuracy: 0.7812 - loss: 0.5142
+[1m 11/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.8011 - loss: 0.5041
+[1m 22/110[0m [32m====[0m[37m================[0m [1m0s[0m 5ms/step - accuracy: 0.7983 - loss: 0.5116
+[1m 32/110[0m [32m=====[0m[37m===============[0m [1m0s[0m 5ms/step - accuracy: 0.7998 - loss: 0.4996
+[1m 42/110[0m [32m=======[0m[37m=============[0m [1m0s[0m 5ms/step - accuracy: 0.8118 - loss: 0.4834
+[1m 52/110[0m [32m=========[0m[37m===========[0m [1m0s[0m 5ms/step - accuracy: 0.8113 - loss: 0.4917
+[1m 61/110[0m [32m===========[0m[37m=========[0m [1m0s[0m 5ms/step - accuracy: 0.8151 - loss: 0.4918
+[1m 71/110[0m [32m============[0m[37m========[0m [1m0s[0m 5ms/step - accuracy: 0.8165 - loss: 0.4870
+[1m 81/110[0m [32m==============[0m[37m======[0m [1m0s[0m 5ms/step - accuracy: 0.8167 - loss: 0.4840
+[1m 92/110[0m [32m================[0m[37m====[0m [1m0s[0m 5ms/step - accuracy: 0.8159 - loss: 0.4842
+[1m103/110[0m [32m==================[0m[37m==[0m [1m0s[0m 5ms/step - accuracy: 0.8149 - loss: 0.4856
+Epoch 5: val_loss improved from 0.59246 to 0.51257, saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+Epoch 5: finished saving model to models/rotor_augmentation_cnn_mild_best.keras
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.8179 - loss: 0.4826 - val_accuracy: 0.8210 - val_loss: 0.5126
+Epoch 6/20
+
+[1m  1/110[0m [37m====================[0m [1m2s[0m 24ms/step - accuracy: 0.7812 - loss: 0.4130
+[1m 11/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.8210 - loss: 0.4261
+[1m 22/110[0m [32m====[0m[37m================[0m [1m0s[0m 5ms/step - accuracy: 0.8281 - loss: 0.4369
+[1m 33/110[0m [32m======[0m[37m==============[0m [1m0s[0m 5ms/step - accuracy: 0.8343 - loss: 0.4207
+[1m 43/110[0m [32m=======[0m[37m=============[0m [1m0s[0m 5ms/step - accuracy: 0.8532 - loss: 0.4011
+[1m 54/110[0m [32m=========[0m[37m===========[0m [1m0s[0m 5ms/step - accuracy: 0.8519 - loss: 0.4059
+[1m 65/110[0m [32m===========[0m[37m=========[0m [1m0s[0m 5ms/step - accuracy: 0.8538 - loss: 0.4128
+[1m 76/110[0m [32m=============[0m[37m=======[0m [1m0s[0m 5ms/step - accuracy: 0.8544 - loss: 0.4074
+[1m 87/110[0m [32m===============[0m[37m=====[0m [1m0s[0m 5ms/step - accuracy: 0.8509 - loss: 0.4122
+[1m 98/110[0m [32m=================[0m[37m===[0m [1m0s[0m 5ms/step - accuracy: 0.8428 - loss: 0.4258
+[1m109/110[0m [32m===================[0m[37m=[0m [1m0s[0m 5ms/step - accuracy: 0.8460 - loss: 0.4195
+Epoch 6: val_loss did not improve from 0.51257
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.8460 - loss: 0.4199 - val_accuracy: 0.7994 - val_loss: 0.5448
+Epoch 7/20
+
+[1m  1/110[0m [37m====================[0m [1m2s[0m 26ms/step - accuracy: 0.8438 - loss: 0.3563
+[1m 11/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.8580 - loss: 0.3692
+[1m 21/110[0m [32m===[0m[37m=================[0m [1m0s[0m 5ms/step - accuracy: 0.8661 - loss: 0.3807
+[1m 30/110[0m [32m=====[0m[37m===============[0m [1m0s[0m 5ms/step - accuracy: 0.8729 - loss: 0.3686
+[1m 39/110[0m [32m=======[0m[37m=============[0m [1m0s[0m 5ms/step - accuracy: 0.8798 - loss: 0.3576
+[1m 49/110[0m [32m========[0m[37m============[0m [1m0s[0m 5ms/step - accuracy: 0.8744 - loss: 0.3582
+[1m 59/110[0m [32m==========[0m[37m==========[0m [1m0s[0m 5ms/step - accuracy: 0.8776 - loss: 0.3594
+[1m 69/110[0m [32m============[0m[37m========[0m [1m0s[0m 5ms/step - accuracy: 0.8727 - loss: 0.3647
+[1m 79/110[0m [32m==============[0m[37m======[0m [1m0s[0m 5ms/step - accuracy: 0.8722 - loss: 0.3654
+[1m 89/110[0m [32m================[0m[37m====[0m [1m0s[0m 5ms/step - accuracy: 0.8683 - loss: 0.3662
+[1m 99/110[0m [32m==================[0m[37m==[0m [1m0s[0m 5ms/step - accuracy: 0.8627 - loss: 0.3800
+[1m109/110[0m [32m===================[0m[37m=[0m [1m0s[0m 5ms/step - accuracy: 0.8644 - loss: 0.3774
+Epoch 7: val_loss did not improve from 0.51257
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.8643 - loss: 0.3778 - val_accuracy: 0.8025 - val_loss: 0.5742
+Epoch 8/20
+
+[1m  1/110[0m [37m====================[0m [1m3s[0m 28ms/step - accuracy: 0.8750 - loss: 0.3532
+[1m 11/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.8750 - loss: 0.3515
+[1m 21/110[0m [32m===[0m[37m=================[0m [1m0s[0m 5ms/step - accuracy: 0.8690 - loss: 0.3719
+[1m 32/110[0m [32m=====[0m[37m===============[0m [1m0s[0m 5ms/step - accuracy: 0.8779 - loss: 0.3561
+[1m 43/110[0m [32m=======[0m[37m=============[0m [1m0s[0m 5ms/step - accuracy: 0.8830 - loss: 0.3425
+[1m 54/110[0m [32m=========[0m[37m===========[0m [1m0s[0m 5ms/step - accuracy: 0.8843 - loss: 0.3395
+[1m 65/110[0m [32m===========[0m[37m=========[0m [1m0s[0m 5ms/step - accuracy: 0.8779 - loss: 0.3494
+[1m 76/110[0m [32m=============[0m[37m=======[0m [1m0s[0m 5ms/step - accuracy: 0.8775 - loss: 0.3492
+[1m 87/110[0m [32m===============[0m[37m=====[0m [1m0s[0m 5ms/step - accuracy: 0.8739 - loss: 0.3563
+[1m 98/110[0m [32m=================[0m[37m===[0m [1m0s[0m 5ms/step - accuracy: 0.8699 - loss: 0.3655
+[1m109/110[0m [32m===================[0m[37m=[0m [1m0s[0m 5ms/step - accuracy: 0.8704 - loss: 0.3631
+Epoch 8: val_loss did not improve from 0.51257
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.8703 - loss: 0.3636 - val_accuracy: 0.7654 - val_loss: 0.6898
+Epoch 9/20
+
+[1m  1/110[0m [37m====================[0m [1m2s[0m 24ms/step - accuracy: 0.8750 - loss: 0.3787
+[1m 11/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.8920 - loss: 0.3267
+[1m 22/110[0m [32m====[0m[37m================[0m [1m0s[0m 5ms/step - accuracy: 0.8807 - loss: 0.3536
+[1m 33/110[0m [32m======[0m[37m==============[0m [1m0s[0m 5ms/step - accuracy: 0.8854 - loss: 0.3371
+[1m 43/110[0m [32m=======[0m[37m=============[0m [1m0s[0m 5ms/step - accuracy: 0.8939 - loss: 0.3220
+[1m 54/110[0m [32m=========[0m[37m===========[0m [1m0s[0m 5ms/step - accuracy: 0.8976 - loss: 0.3121
+[1m 65/110[0m [32m===========[0m[37m=========[0m [1m0s[0m 5ms/step - accuracy: 0.8966 - loss: 0.3218
+[1m 76/110[0m [32m=============[0m[37m=======[0m [1m0s[0m 5ms/step - accuracy: 0.8993 - loss: 0.3173
+[1m 87/110[0m [32m===============[0m[37m=====[0m [1m0s[0m 5ms/step - accuracy: 0.8955 - loss: 0.3223
+[1m 98/110[0m [32m=================[0m[37m===[0m [1m0s[0m 5ms/step - accuracy: 0.8925 - loss: 0.3273
+[1m109/110[0m [32m===================[0m[37m=[0m [1m0s[0m 5ms/step - accuracy: 0.8933 - loss: 0.3237
+Epoch 9: val_loss did not improve from 0.51257
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.8932 - loss: 0.3240 - val_accuracy: 0.7917 - val_loss: 0.6241
+Epoch 10/20
+
+[1m  1/110[0m [37m====================[0m [1m2s[0m 25ms/step - accuracy: 0.9062 - loss: 0.3011
+[1m 11/110[0m [32m==[0m[37m==================[0m [1m0s[0m 5ms/step - accuracy: 0.9091 - loss: 0.2802
+[1m 22/110[0m [32m====[0m[37m================[0m [1m0s[0m 5ms/step - accuracy: 0.9062 - loss: 0.3106
+[1m 32/110[0m [32m=====[0m[37m===============[0m [1m0s[0m 5ms/step - accuracy: 0.9043 - loss: 0.3005
+[1m 42/110[0m [32m=======[0m[37m=============[0m [1m0s[0m 5ms/step - accuracy: 0.9129 - loss: 0.2844
+[1m 52/110[0m [32m=========[0m[37m===========[0m [1m0s[0m 5ms/step - accuracy: 0.9123 - loss: 0.2798
+[1m 62/110[0m [32m===========[0m[37m=========[0m [1m0s[0m 5ms/step - accuracy: 0.9103 - loss: 0.2869
+[1m 73/110[0m [32m=============[0m[37m=======[0m [1m0s[0m 5ms/step - accuracy: 0.9084 - loss: 0.2887
+[1m 83/110[0m [32m===============[0m[37m=====[0m [1m0s[0m 5ms/step - accuracy: 0.9051 - loss: 0.2948
+[1m 93/110[0m [32m================[0m[37m====[0m [1m0s[0m 5ms/step - accuracy: 0.9005 - loss: 0.3025
+[1m103/110[0m [32m==================[0m[37m==[0m [1m0s[0m 5ms/step - accuracy: 0.9023 - loss: 0.2997
+Epoch 10: val_loss did not improve from 0.51257
+
+[1m110/110[0m [32m====================[0m[37m[0m [1m1s[0m 6ms/step - accuracy: 0.9021 - loss: 0.3003 - val_accuracy: 0.8086 - val_loss: 0.6137
+Epoch 10: early stopping
+Restoring model weights from the end of the best epoch: 5.
+
+Training complete.
+Final model: models/rotor_augmentation_cnn_mild.keras
+Best checkpoint: models/rotor_augmentation_cnn_mild_best.keras
+Training history: reports/rotor_augmentation_mild_history.csv

@@ -1,0 +1,312 @@
+
+======================================================================
+baseline_cnn_mild
+File: models/baseline_cnn_mild.keras
+File size: 0.3326 MB
+Input shape: (None, 40, 87, 1)
+Output shape: (None, 3)
+
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 40, 87, 16)          │             160 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 20, 43, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 20, 43, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_1 (MaxPooling2D)       │ (None, 10, 21, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (None, 10, 21, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 64)                  │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 32)                  │           2,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 3)                   │              99 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 25,475 (99.51 KB)
+ Trainable params: 25,475 (99.51 KB)
+ Non-trainable params: 0 (0.00 B)
+
+
+Layer details:
+conv2d: Conv2D; output_shape=(None, 40, 87, 16); parameters=160
+max_pooling2d: MaxPooling2D; output_shape=(None, 20, 43, 16); parameters=0
+conv2d_1: Conv2D; output_shape=(None, 20, 43, 32); parameters=4,640
+max_pooling2d_1: MaxPooling2D; output_shape=(None, 10, 21, 32); parameters=0
+conv2d_2: Conv2D; output_shape=(None, 10, 21, 64); parameters=18,496
+global_average_pooling2d: GlobalAveragePooling2D; output_shape=(None, 64); parameters=0
+dense: Dense; output_shape=(None, 32); parameters=2,080
+dense_1: Dense; output_shape=(None, 3); parameters=99
+
+======================================================================
+improved_cnn_mild
+File: models/improved_cnn_mild.keras
+File size: 0.3326 MB
+Input shape: (None, 40, 87, 1)
+Output shape: (None, 3)
+
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 40, 87, 16)          │             160 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 20, 43, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 20, 43, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_1 (MaxPooling2D)       │ (None, 10, 21, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (None, 10, 21, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 64)                  │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 32)                  │           2,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 3)                   │              99 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 25,475 (99.51 KB)
+ Trainable params: 25,475 (99.51 KB)
+ Non-trainable params: 0 (0.00 B)
+
+
+Layer details:
+conv2d: Conv2D; output_shape=(None, 40, 87, 16); parameters=160
+max_pooling2d: MaxPooling2D; output_shape=(None, 20, 43, 16); parameters=0
+conv2d_1: Conv2D; output_shape=(None, 20, 43, 32); parameters=4,640
+max_pooling2d_1: MaxPooling2D; output_shape=(None, 10, 21, 32); parameters=0
+conv2d_2: Conv2D; output_shape=(None, 10, 21, 64); parameters=18,496
+global_average_pooling2d: GlobalAveragePooling2D; output_shape=(None, 64); parameters=0
+dense: Dense; output_shape=(None, 32); parameters=2,080
+dense_1: Dense; output_shape=(None, 3); parameters=99
+
+======================================================================
+rotor_augmentation_cnn_mild
+File: models/rotor_augmentation_cnn_mild_best.keras
+File size: 0.3326 MB
+Input shape: (None, 40, 87, 1)
+Output shape: (None, 3)
+
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 40, 87, 16)          │             160 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 20, 43, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 20, 43, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_1 (MaxPooling2D)       │ (None, 10, 21, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (None, 10, 21, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 64)                  │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 32)                  │           2,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 3)                   │              99 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 25,475 (99.51 KB)
+ Trainable params: 25,475 (99.51 KB)
+ Non-trainable params: 0 (0.00 B)
+
+
+Layer details:
+conv2d: Conv2D; output_shape=(None, 40, 87, 16); parameters=160
+max_pooling2d: MaxPooling2D; output_shape=(None, 20, 43, 16); parameters=0
+conv2d_1: Conv2D; output_shape=(None, 20, 43, 32); parameters=4,640
+max_pooling2d_1: MaxPooling2D; output_shape=(None, 10, 21, 32); parameters=0
+conv2d_2: Conv2D; output_shape=(None, 10, 21, 64); parameters=18,496
+global_average_pooling2d: GlobalAveragePooling2D; output_shape=(None, 64); parameters=0
+dense: Dense; output_shape=(None, 32); parameters=2,080
+dense_1: Dense; output_shape=(None, 3); parameters=99
+
+======================================================================
+rotor_consistent_cnn_mild
+File: models/rotor_consistent_cnn_mild_best.keras
+File size: 0.3326 MB
+Input shape: (None, 40, 87, 1)
+Output shape: (None, 3)
+
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 40, 87, 16)          │             160 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 20, 43, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 20, 43, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_1 (MaxPooling2D)       │ (None, 10, 21, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (None, 10, 21, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 64)                  │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 32)                  │           2,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 3)                   │              99 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 25,475 (99.51 KB)
+ Trainable params: 25,475 (99.51 KB)
+ Non-trainable params: 0 (0.00 B)
+
+
+Layer details:
+conv2d: Conv2D; output_shape=(None, 40, 87, 16); parameters=160
+max_pooling2d: MaxPooling2D; output_shape=(None, 20, 43, 16); parameters=0
+conv2d_1: Conv2D; output_shape=(None, 20, 43, 32); parameters=4,640
+max_pooling2d_1: MaxPooling2D; output_shape=(None, 10, 21, 32); parameters=0
+conv2d_2: Conv2D; output_shape=(None, 10, 21, 64); parameters=18,496
+global_average_pooling2d: GlobalAveragePooling2D; output_shape=(None, 64); parameters=0
+dense: Dense; output_shape=(None, 32); parameters=2,080
+dense_1: Dense; output_shape=(None, 3); parameters=99
+
+======================================================================
+mfcc_cnn1d_mild
+File: models/mfcc_cnn1d_mild_best.keras
+File size: 0.2705 MB
+Input shape: (None, 87, 40)
+Output shape: (None, 3)
+
+Model: "mfcc_cnn1d"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv1d (Conv1D)                      │ (None, 87, 32)              │           6,400 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization                  │ (None, 87, 32)              │             128 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation (Activation)              │ (None, 87, 32)              │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling1d (MaxPooling1D)         │ (None, 43, 32)              │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv1d_1 (Conv1D)                    │ (None, 43, 64)              │          10,240 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization_1                │ (None, 43, 64)              │             256 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation_1 (Activation)            │ (None, 43, 64)              │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling1d             │ (None, 64)                  │               0 │
+│ (GlobalAveragePooling1D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 32)                  │           2,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 32)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 3)                   │              99 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 19,203 (75.01 KB)
+ Trainable params: 19,011 (74.26 KB)
+ Non-trainable params: 192 (768.00 B)
+
+
+Layer details:
+conv1d: Conv1D; output_shape=(None, 87, 32); parameters=6,400
+batch_normalization: BatchNormalization; output_shape=(None, 87, 32); parameters=128
+activation: Activation; output_shape=(None, 87, 32); parameters=0
+max_pooling1d: MaxPooling1D; output_shape=(None, 43, 32); parameters=0
+conv1d_1: Conv1D; output_shape=(None, 43, 64); parameters=10,240
+batch_normalization_1: BatchNormalization; output_shape=(None, 43, 64); parameters=256
+activation_1: Activation; output_shape=(None, 43, 64); parameters=0
+global_average_pooling1d: GlobalAveragePooling1D; output_shape=(None, 64); parameters=0
+dropout: Dropout; output_shape=(None, 64); parameters=0
+dense: Dense; output_shape=(None, 32); parameters=2,080
+dropout_1: Dropout; output_shape=(None, 32); parameters=0
+dense_1: Dense; output_shape=(None, 3); parameters=99
+
+======================================================================
+mfcc_mlp_v2_mild
+File: models/mfcc_mlp_v2_mild_best.keras
+File size: 5.244 MB
+Input shape: (None, 40, 87)
+Output shape: (None, 3)
+
+Model: "mfcc_mlp_v2"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ flatten (Flatten)                    │ (None, 3480)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │         445,440 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization                  │ (None, 128)                 │             512 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation (Activation)              │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 64)                  │           8,192 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization_1                │ (None, 64)                  │             256 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation_1 (Activation)            │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (None, 3)                   │             195 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 454,595 (1.73 MB)
+ Trainable params: 454,211 (1.73 MB)
+ Non-trainable params: 384 (1.50 KB)
+
+
+Layer details:
+flatten: Flatten; output_shape=(None, 3480); parameters=0
+dense: Dense; output_shape=(None, 128); parameters=445,440
+batch_normalization: BatchNormalization; output_shape=(None, 128); parameters=512
+activation: Activation; output_shape=(None, 128); parameters=0
+dropout: Dropout; output_shape=(None, 128); parameters=0
+dense_1: Dense; output_shape=(None, 64); parameters=8,192
+batch_normalization_1: BatchNormalization; output_shape=(None, 64); parameters=256
+activation_1: Activation; output_shape=(None, 64); parameters=0
+dropout_1: Dropout; output_shape=(None, 64); parameters=0
+dense_2: Dense; output_shape=(None, 3); parameters=195
+
+======================================================================
+mfcc_mlp_mild
+File: models/mfcc_mlp_mild_best.keras
+File size: 2.603 MB
+Input shape: (None, 40, 87)
+Output shape: (None, 3)
+
+Model: "mfcc_mlp"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ flatten (Flatten)                    │ (None, 3480)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 64)                  │         222,784 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 32)                  │           2,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (None, 3)                   │              99 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 224,963 (878.76 KB)
+ Trainable params: 224,963 (878.76 KB)
+ Non-trainable params: 0 (0.00 B)
+
+
+Layer details:
+flatten: Flatten; output_shape=(None, 3480); parameters=0
+dense: Dense; output_shape=(None, 64); parameters=222,784
+dropout: Dropout; output_shape=(None, 64); parameters=0
+dense_1: Dense; output_shape=(None, 32); parameters=2,080
+dense_2: Dense; output_shape=(None, 3); parameters=99

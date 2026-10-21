@@ -1,0 +1,16 @@
+model,model_file,condition,snr_db,recordings,accuracy,macro_f1
+original,rotor_consistent_cnn_best.keras,clean,,72,0.8333333333333334,0.8205585264408795
+class_weighted,rotor_consistent_cnn_balanced_best.keras,clean,,72,0.8194444444444444,0.8041204887752201
+undersampled,rotor_consistent_cnn_undersampled_best.keras,clean,,72,0.8055555555555556,0.7853945537666468
+original,rotor_consistent_cnn_best.keras,rotor_plus5db,5.0,72,0.7777777777777778,0.7269762299613046
+class_weighted,rotor_consistent_cnn_balanced_best.keras,rotor_plus5db,5.0,72,0.75,0.6751851851851852
+undersampled,rotor_consistent_cnn_undersampled_best.keras,rotor_plus5db,5.0,72,0.7777777777777778,0.7264870844243948
+original,rotor_consistent_cnn_best.keras,rotor_0db,0.0,72,0.7916666666666666,0.7376203528006183
+class_weighted,rotor_consistent_cnn_balanced_best.keras,rotor_0db,0.0,72,0.75,0.6759259259259259
+undersampled,rotor_consistent_cnn_undersampled_best.keras,rotor_0db,0.0,72,0.7777777777777778,0.7247962247962247
+original,rotor_consistent_cnn_best.keras,rotor_minus5db,-5.0,72,0.7777777777777778,0.726877533789677
+class_weighted,rotor_consistent_cnn_balanced_best.keras,rotor_minus5db,-5.0,72,0.7777777777777778,0.7022373051784817
+undersampled,rotor_consistent_cnn_undersampled_best.keras,rotor_minus5db,-5.0,72,0.7638888888888888,0.6951784782770698
+original,rotor_consistent_cnn_best.keras,rotor_minus10db,-10.0,72,0.7777777777777778,0.702991452991453
+class_weighted,rotor_consistent_cnn_balanced_best.keras,rotor_minus10db,-10.0,72,0.7361111111111112,0.633221850613155
+undersampled,rotor_consistent_cnn_undersampled_best.keras,rotor_minus10db,-10.0,72,0.7222222222222222,0.6431457431457431

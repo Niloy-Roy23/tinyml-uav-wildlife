@@ -1,0 +1,7 @@
+model,condition,recordings,accuracy,macro_f1
+E6_rotor_background_INT8,clean,72,0.8055555555555556,0.779100529100529
+E6_rotor_background_INT8,rotor_0db,72,0.75,0.6850209815727056
+E6_rotor_background_INT8,rotor_minus10db,72,0.7361111111111112,0.664544979762371
+E7_rotor_combined_INT8,clean,72,0.8194444444444444,0.8001707212974818
+E7_rotor_combined_INT8,rotor_0db,72,0.8055555555555556,0.7712962962962964
+E7_rotor_combined_INT8,rotor_minus10db,72,0.6527777777777778,0.5839345839345839

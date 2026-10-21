@@ -1,0 +1,36 @@
+{
+  "models_discovered": 70,
+  "models_loaded": 70,
+  "test_recordings": 72,
+  "conditions": [
+    {
+      "name": "clean",
+      "snr_db": null
+    },
+    {
+      "name": "rotor_plus5db",
+      "snr_db": 5.0
+    },
+    {
+      "name": "rotor_0db",
+      "snr_db": 0.0
+    },
+    {
+      "name": "rotor_minus5db",
+      "snr_db": -5.0
+    },
+    {
+      "name": "rotor_minus10db",
+      "snr_db": -10.0
+    }
+  ],
+  "class_order": [
+    "bird",
+    "insect",
+    "background"
+  ],
+  "seed": 42,
+  "window_seconds": 1.0,
+  "window_hop_seconds": 0.5,
+  "elapsed_seconds": 37.39
+}

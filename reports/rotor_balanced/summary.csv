@@ -1,0 +1,4 @@
+model,condition,recordings,accuracy,macro_f1
+rotor_balanced,clean,72,0.7916666666666666,0.77381339527681
+rotor_balanced,rotor_0db,72,0.7777777777777778,0.7361476993326308
+rotor_balanced,rotor_minus10db,72,0.6944444444444444,0.6442241968557757

@@ -1,0 +1,4 @@
+,pred_bird,pred_insect,pred_background
+true_bird,252,5,31
+true_insect,37,107,0
+true_background,42,11,163

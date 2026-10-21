@@ -1,0 +1,7 @@
+model,condition,recordings,accuracy,macro_f1
+existing_augmentation,clean,72,0.8472222222222222,0.8368205868205868
+existing_augmentation,rotor_0db,72,0.5138888888888888,0.4052287581699347
+existing_augmentation,rotor_minus10db,72,0.2361111111111111,0.1557422969187675
+rotor_augmentation,clean,72,0.8194444444444444,0.797927297927298
+rotor_augmentation,rotor_0db,72,0.625,0.48737597013459083
+rotor_augmentation,rotor_minus10db,72,0.4861111111111111,0.3017188596687723

@@ -1,0 +1,8 @@
+model,file,file_size_MB,trainable_parameters,non_trainable_parameters,total_parameters,input_shape,output_shape,layer_count
+baseline_cnn_mild,models/baseline_cnn_mild.keras,0.3326,25475,0,25475,"(None, 40, 87, 1)","(None, 3)",8
+improved_cnn_mild,models/improved_cnn_mild.keras,0.3326,25475,0,25475,"(None, 40, 87, 1)","(None, 3)",8
+rotor_augmentation_cnn_mild,models/rotor_augmentation_cnn_mild_best.keras,0.3326,25475,0,25475,"(None, 40, 87, 1)","(None, 3)",8
+rotor_consistent_cnn_mild,models/rotor_consistent_cnn_mild_best.keras,0.3326,25475,0,25475,"(None, 40, 87, 1)","(None, 3)",8
+mfcc_cnn1d_mild,models/mfcc_cnn1d_mild_best.keras,0.2705,19011,192,19203,"(None, 87, 40)","(None, 3)",12
+mfcc_mlp_v2_mild,models/mfcc_mlp_v2_mild_best.keras,5.244,454211,384,454595,"(None, 40, 87)","(None, 3)",10
+mfcc_mlp_mild,models/mfcc_mlp_mild_best.keras,2.603,224963,0,224963,"(None, 40, 87)","(None, 3)",5

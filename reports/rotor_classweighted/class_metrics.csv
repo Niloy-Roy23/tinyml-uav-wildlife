@@ -1,0 +1,10 @@
+model,condition,class,precision,recall,f1_score,support
+rotor_classweighted,clean,bird,0.8378378378378378,0.96875,0.8985507246376812,32.0
+rotor_classweighted,clean,insect,0.8666666666666667,0.8125,0.8387096774193549,16.0
+rotor_classweighted,clean,background,0.95,0.7916666666666666,0.8636363636363636,24.0
+rotor_classweighted,rotor_0db,bird,0.7804878048780488,1.0,0.8767123287671232,32.0
+rotor_classweighted,rotor_0db,insect,0.45454545454545453,0.3125,0.37037037037037035,16.0
+rotor_classweighted,rotor_0db,background,0.8,0.6666666666666666,0.7272727272727273,24.0
+rotor_classweighted,rotor_minus10db,bird,0.6037735849056604,1.0,0.7529411764705882,32.0
+rotor_classweighted,rotor_minus10db,insect,0.5,0.0625,0.1111111111111111,16.0
+rotor_classweighted,rotor_minus10db,background,0.7647058823529411,0.5416666666666666,0.6341463414634146,24.0

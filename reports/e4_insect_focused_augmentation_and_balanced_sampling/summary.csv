@@ -1,0 +1,10 @@
+model,condition,recordings,accuracy,macro_f1
+e3_original,clean,72,0.875,0.8669655885644666
+e3_original,rotor_0db,72,0.7361111111111112,0.6581184754700736
+e3_original,rotor_minus10db,72,0.6388888888888888,0.499399543015038
+e3_rotor_augmented,clean,72,0.875,0.8572039072039072
+e3_rotor_augmented,rotor_0db,72,0.7222222222222222,0.6023512435277141
+e3_rotor_augmented,rotor_minus10db,72,0.7083333333333334,0.5922192353643967
+e4_insect_focused_augmentation_and_balanced_sampling,clean,72,0.8194444444444444,0.8099342911237333
+e4_insect_focused_augmentation_and_balanced_sampling,rotor_0db,72,0.7638888888888888,0.7049753719449313
+e4_insect_focused_augmentation_and_balanced_sampling,rotor_minus10db,72,0.6944444444444444,0.6613669590643275

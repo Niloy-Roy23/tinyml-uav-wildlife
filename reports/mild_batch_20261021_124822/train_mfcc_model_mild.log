@@ -1,0 +1,72 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792579791.424846   21048 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792579792.770747   21048 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1792579794.169585   21048 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Normalization parameters saved: C:\Users\NILOY\tinyml_uav_wildlife\models\mfcc_normalization_mild.npz
+Normalization shape: (1, 40, 87)
+Epoch 1/30
+
+[1m 1/61[0m [37m====================[0m [1m20s[0m 345ms/step - accuracy: 1.0000 - loss: 0.0053
+[1m36/61[0m [32m===========[0m[37m=========[0m [1m0s[0m 1ms/step - accuracy: 0.9957 - loss: 0.0250
+Epoch 1: val_accuracy improved from None to 0.81173, saving model to C:\Users\NILOY\tinyml_uav_wildlife\models\mfcc_mlp_mild_best.keras
+
+Epoch 1: finished saving model to C:\Users\NILOY\tinyml_uav_wildlife\models\mfcc_mlp_mild_best.keras
+
+[1m61/61[0m [32m====================[0m[37m[0m [1m1s[0m 4ms/step - accuracy: 0.9959 - loss: 0.0260 - val_accuracy: 0.8117 - val_loss: 0.8698 - learning_rate: 3.1250e-05
+Epoch 2/30
+
+[1m 1/61[0m [37m====================[0m [1m1s[0m 21ms/step - accuracy: 1.0000 - loss: 0.0151
+[1m38/61[0m [32m============[0m[37m========[0m [1m0s[0m 1ms/step - accuracy: 0.9951 - loss: 0.0270
+Epoch 2: val_accuracy did not improve from 0.81173
+
+[1m61/61[0m [32m====================[0m[37m[0m [1m0s[0m 2ms/step - accuracy: 0.9954 - loss: 0.0275 - val_accuracy: 0.8102 - val_loss: 0.8654 - learning_rate: 3.1250e-05
+Epoch 3/30
+
+[1m 1/61[0m [37m====================[0m [1m1s[0m 20ms/step - accuracy: 1.0000 - loss: 0.0098
+[1m36/61[0m [32m===========[0m[37m=========[0m [1m0s[0m 1ms/step - accuracy: 0.9948 - loss: 0.0282
+Epoch 3: val_accuracy did not improve from 0.81173
+
+[1m61/61[0m [32m====================[0m[37m[0m [1m0s[0m 3ms/step - accuracy: 0.9954 - loss: 0.0250 - val_accuracy: 0.8102 - val_loss: 0.8688 - learning_rate: 3.1250e-05
+Epoch 4/30
+
+[1m 1/61[0m [37m====================[0m [1m1s[0m 22ms/step - accuracy: 1.0000 - loss: 0.0121
+[1m31/61[0m [32m==========[0m[37m==========[0m [1m0s[0m 2ms/step - accuracy: 0.9960 - loss: 0.0250
+[1m60/61[0m [32m===================[0m[37m=[0m [1m0s[0m 2ms/step - accuracy: 0.9964 - loss: 0.0247
+Epoch 4: val_accuracy did not improve from 0.81173
+
+[1m61/61[0m [32m====================[0m[37m[0m [1m0s[0m 3ms/step - accuracy: 0.9964 - loss: 0.0245 - val_accuracy: 0.8071 - val_loss: 0.8712 - learning_rate: 3.1250e-05
+Epoch 5/30
+
+[1m 1/61[0m [37m====================[0m [1m1s[0m 22ms/step - accuracy: 1.0000 - loss: 0.0197
+[1m36/61[0m [32m===========[0m[37m=========[0m [1m0s[0m 1ms/step - accuracy: 0.9965 - loss: 0.0222
+Epoch 5: val_accuracy did not improve from 0.81173
+
+Epoch 5: ReduceLROnPlateau reducing learning rate to 1.5625000742147677e-05.
+
+[1m61/61[0m [32m====================[0m[37m[0m [1m0s[0m 2ms/step - accuracy: 0.9964 - loss: 0.0229 - val_accuracy: 0.8071 - val_loss: 0.8774 - learning_rate: 3.1250e-05
+Epoch 6/30
+
+[1m 1/61[0m [37m====================[0m [1m1s[0m 21ms/step - accuracy: 1.0000 - loss: 0.0099
+[1m35/61[0m [32m===========[0m[37m=========[0m [1m0s[0m 1ms/step - accuracy: 0.9955 - loss: 0.0197
+Epoch 6: val_accuracy did not improve from 0.81173
+
+[1m61/61[0m [32m====================[0m[37m[0m [1m0s[0m 2ms/step - accuracy: 0.9959 - loss: 0.0218 - val_accuracy: 0.8086 - val_loss: 0.8814 - learning_rate: 1.5625e-05
+Epoch 7/30
+
+[1m 1/61[0m [37m====================[0m [1m1s[0m 21ms/step - accuracy: 1.0000 - loss: 0.0094
+[1m36/61[0m [32m===========[0m[37m=========[0m [1m0s[0m 1ms/step - accuracy: 0.9931 - loss: 0.0346
+Epoch 7: val_accuracy did not improve from 0.81173
+
+[1m61/61[0m [32m====================[0m[37m[0m [1m0s[0m 2ms/step - accuracy: 0.9933 - loss: 0.0340 - val_accuracy: 0.7994 - val_loss: 0.8804 - learning_rate: 1.5625e-05
+Epoch 7: early stopping
+Restoring model weights from the end of the best epoch: 1.
+
+Training complete.
+Best epoch: 1
+Best validation accuracy: 0.8117
+Best model: C:\Users\NILOY\tinyml_uav_wildlife\models\mfcc_mlp_mild_best.keras
+Final model: C:\Users\NILOY\tinyml_uav_wildlife\models\mfcc_mlp_mild.keras
+Normalization file: C:\Users\NILOY\tinyml_uav_wildlife\models\mfcc_normalization_mild.npz

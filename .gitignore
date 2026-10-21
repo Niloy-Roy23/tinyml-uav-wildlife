@@ -31,3 +31,24 @@ Thumbs.db
 .env
 # Processed datasets
 data/processed/*.npz
+# Local Python environments and cache
+.venv/
+.venv_wsl/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+
+# Local microphone test recordings
+data/processed/*.wav
+
+# Temporary local reference array
+/windows_reference_feature.npy

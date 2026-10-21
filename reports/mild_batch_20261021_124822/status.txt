@@ -1,0 +1,8 @@
+Mild-weight training batch: 20261021_124822
+Weights: bird=0.875, insect=1.25, background=1.0
+PASS: src/train_improved_mild.py
+PASS: src/train_rotor_augmentation_mild.py
+PASS: src/train_rotor_consistent_mild.py
+PASS: src/train_mfcc_cnn1d_mild.py
+PASS: src/train_mfcc_mlp_v2_mild.py
+PASS: src/train_mfcc_model_mild.py
